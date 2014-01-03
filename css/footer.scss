@@ -1,0 +1,44 @@
+#footer {
+  background: url(../images/stripped-border.png) repeat-x 0 0;
+  background-color: rgba($brown,0.95);
+  @include box-shadow(0px -10px 30px,$brown);
+  margin-top: 100px;
+  z-index: 2;
+  visibility: hidden;
+    .container {
+      //display: none;
+      position: relative;
+      padding: 50px 0 100px;
+        aside {
+          position: absolute;
+          bottom: 0;
+          right: -500px;
+        }
+        #footer-nav {
+              h4 {
+                color: $footerNavItemColor;
+                font : {
+                  family: $themefont-bold;
+                }
+              }
+              li {
+                list-style: none;
+                  a {
+                    color: $footerNavItemColor;
+                    @include transition(all,0.4s);
+                      &:hover {
+                        color: $yellow;
+                      }
+                  }
+              }
+        }
+        .copyright {
+          position: absolute;
+          bottom: 0;
+          left: 15px;
+          color: $footerNavItemColor;
+          padding: 20px 0 10px;
+          border-top: 1px solid $footerBorders;
+        }
+    }
+}
